@@ -21,9 +21,17 @@ const config = {
     locales: ['en'],
   },
 
+  // Add markdown configuration for Mermaid
+  markdown: {
+    mermaid: true,
+  },
+
+  // Add Mermaid theme
+  themes: ['@docusaurus/theme-mermaid'],
+  
   presets: [
     [
-      'classic',
+      '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
@@ -31,6 +39,7 @@ const config = {
           routeBasePath: '/docs',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/NASA-AMMOS/MMTC/tree/main/',
+          remarkPlugins: [require('mdx-mermaid')],
         },
         blog: {
           path: 'jnispice',
@@ -41,6 +50,7 @@ const config = {
             xslt: true,
           },
           editUrl: 'https://github.com/NASA-AMMOS/MMTC/tree/main/',
+          remarkPlugins: [require('mdx-mermaid')],
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -48,6 +58,7 @@ const config = {
       }),
     ],
   ],
+  
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -88,7 +99,7 @@ const config = {
           {
             title: 'Documentation',
             items: [
-              { label: 'User Guide (Asciidoc)', to: '/docs/MMTC_Users_Guide' },
+              { label: 'User Guide', to: '/docs/user' },
               { label: 'Developer Notes', to: '/blog' },
             ],
           },
@@ -113,8 +124,8 @@ const config = {
           src: 'img/logo.svg',
           href: '/',
         },
-        copyright:
-          `Copyright © ${new Date().getFullYear()} Your Organization.`,
+        //copyright:
+        //  `Copyright © ${new Date().getFullYear()} California Institute of Technology.`,
       },
       prism: {
         theme: prismThemes.github,

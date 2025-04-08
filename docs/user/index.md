@@ -1,73 +1,134 @@
-```md
 ---
-id: user-docs
-title: User Documentation
+id: user
+title: User Guide
 sidebar_position: 3
 ---
 
-# User Documentation
+# MMTC User Documentation
 
-Welcome to the User Documentation section for MMTC! Here you'll find all the resources you need to get started with our software, from installation guides to advanced feature tutorials. This documentation is designed to help you make the most of MMTC, regardless of your experience level.
+Welcome to the User Documentation for the Multi-Mission Time Correlation (MMTC) software. This section provides comprehensive guidance for mission operations teams using MMTC to manage spacecraft time correlation. Whether you're implementing MMTC for a new mission or operating an existing MMTC deployment, you'll find the resources you need here.
 
 ## Introduction
 
-MMTC (Multi-Modal Transport Control) is designed to streamline and optimize transportation management across various modes of transport. It is tailored for logistics professionals, fleet managers, and organizations looking to enhance their operational efficiency. This documentation will guide you through everything you need to know, from getting started with basic features to exploring more advanced functionalities.
+MMTC is a NASA AMMOS component developed by Johns Hopkins Applied Physics Laboratory (JHU/APL) that performs time correlation between spacecraft clocks and ground time. It processes telemetry data to extract timing information, calculates clock drift rates, and generates standardized time correlation products essential for mission operations. This documentation will guide you through configuring, operating, and troubleshooting MMTC for your specific mission requirements.
 
-## Installation Guide
+## Installation and Setup
 
-The [Installation Guide](/docs/user/installation.md) will walk you through the process of setting up MMTC on your system. Whether you are using Windows, macOS, or Linux, you'll find step-by-step instructions tailored to your operating system.
-
-### What's Covered
-
-- System requirements
-- Downloading the software
-- Installation steps for different operating systems
-- Verifying the installation
-- Troubleshooting common installation issues
-
-## Quick Start
-
-If you want to dive right in, the [Quick Start Guide](./quick-start.md) is the place to begin. This guide will help you get up and running in no time, with a focus on the essential features you'll need to know.
+The [Installation Guide](installation) provides detailed instructions for installing MMTC in your mission operations environment.
 
 ### What's Covered
 
-- Initial setup and configuration
-- Creating your first transport plan
-- Basic usage examples
-- Common workflows
+- System requirements for operational deployment
+- Installing MMTC from RPM packages (RHEL 8/9)
+- Installing from tar.gz archives (alternative environments)
+- Directory structure and file organization
+- Verifying installation and initial setup
+- Setting up proper file permissions and access controls
 
-## Feature Overview
+## Configuration Guide
 
-Explore the core features of MMTC in the [Feature Overview](./features.md) section. This part of the documentation provides a deep dive into the functionalities that make MMTC powerful and flexible.
-
-### What's Covered
-
-- Key features and their benefits
-- How to access and use different features
-- Example use cases in transportation management
-
-## Advanced Usage
-
-For users looking to leverage the full potential of MMTC, the [Advanced Usage](./advanced-usage.md) section offers in-depth tutorials and guides.
+The [Configuration Guide](configuration) walks you through the process of adapting MMTC to your specific spacecraft and mission requirements.
 
 ### What's Covered
 
-- Custom configurations for transport scenarios
-- Integration with other logistics tools and services
-- Automation and scripting for transport operations
-- Performance optimization tips for large-scale operations
+- Setting up `TimeCorrelationConfigProperties.xml`
+- Configuring telemetry source plugins
+- Defining filter parameters for your mission
+- Setting up ground station mappings
+- Configuring SCLK partition definitions
+- Logging configuration
+- Product output settings
 
-## FAQs and Troubleshooting
+## Operational Procedures
 
-If you encounter issues or have questions, the [FAQs](/docs/faqs.md) and [Troubleshooting](./troubleshooting.md) sections are here to help. They cover common problems and their solutions, as well as answers to frequently asked questions.
+The [Operational Procedures](operations) section covers the day-to-day usage of MMTC in a mission operations environment.
 
 ### What's Covered
 
-- Frequently asked questions about MMTC
-- Common issues and fixes
-- How to get additional support
+- Command-line interface reference
+- Scheduling regular MMTC runs
+- Telemetry query parameters
+- Monitoring execution status
+- Verifying product generation
+- Distribution of time correlation products
+- Handling SCLK discontinuities
 
-## Contributing to Documentation
+## Product Usage Guide
 
-We welcome contributions from the community to help improve our documentation. If you find something that can be enhanced or would like to add new content, please see the [Contributing Guide](/docs/contributing.md) for details on how to get involved.
-```
+The [Product Usage Guide](products) explains how to use the time correlation products generated by MMTC.
+
+### What's Covered
+
+- SCLK Kernel integration with SPICE
+- Using SCLK/SCET files with ground systems
+- Analyzing time history files
+- Interpreting summary tables
+- Using uplink command files for spacecraft clock updates
+- Product validation procedures
+
+## Advanced Configuration
+
+For missions with specialized requirements, the [Advanced Configuration](advanced-config) section provides detailed information on advanced MMTC capabilities.
+
+### What's Covered
+
+- Temperature-dependent clock drift compensation
+- Multi-partition SCLK configuration
+- Custom telemetry source implementation
+- Advanced filtering techniques
+- Correlation during spacecraft anomalies
+- Configuration for multiple redundant clocks
+
+## Performance Tuning
+
+The [Performance Tuning Guide](performance) offers recommendations for optimizing MMTC for your specific environment.
+
+### What's Covered
+
+- Memory allocation for large telemetry datasets
+- Processing efficiency recommendations
+- Filter optimization strategies
+- Telemetry query optimization
+- Handling high-volume telemetry sources
+- Parallel processing configuration
+
+## Troubleshooting
+
+When issues arise, the [Troubleshooting Guide](troubleshooting) provides solutions to common problems encountered when operating MMTC.
+
+### What's Covered
+
+- Diagnosing telemetry processing failures
+- Addressing filter rejection issues
+- Resolving configuration errors
+- Handling product generation failures
+- Validating correlation results
+- Log analysis for problem identification
+- Recovery procedures for interrupted processing
+
+## Integration with Mission Systems
+
+The [Integration Guide](integration) covers how to integrate MMTC with other mission systems.
+
+### What's Covered
+
+- Integrating with AMPCS
+- Product distribution to analysis tools
+- Integration with mission planning systems
+- Automated workflows with other ground software
+- Using MMTC products with science data processing
+- Integration with mission timelines
+
+## Reference Materials
+
+Additional [Reference Materials](reference) provide in-depth information on specific aspects of MMTC.
+
+### What's Covered
+
+- Time system definitions and conversions
+- SPICE kernel format specifications
+- Telemetry frame format requirements
+- Filter algorithm details
+- Spacecraft clock concepts
+- Light-time correction methodology
+- Oscillator drift characteristics

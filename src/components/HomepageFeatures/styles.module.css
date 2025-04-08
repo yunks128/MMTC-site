@@ -1,35 +1,104 @@
 .features {
-  padding: 2rem 0;
-  width: 100%;
-  text-align: left; /* Ensures all content is left-aligned */
+  padding: 4rem 0;
+  background-color: #f8f9fa;
 }
 
-.sectionTitleContainer {
-  text-align: left; /* Aligns the section title to the left */
+.featuresHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.featuresTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1a2a3a;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.featuresTitle:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #4a90e2;
+  border-radius: 2px;
+}
+
+.featuresSubtitle {
+  font-size: 1.25rem;
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+
+.featureCard {
+  height: 100%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
   margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.feature {
-  text-align: left; /* Aligns each feature to the left */
-  margin-bottom: 2rem; /* Adds space between features */
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.featureImageContainer {
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.1) 0%, rgba(26, 42, 58, 0.05) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .featureSvg {
-  height: 200px;
-  width: 200px;
-  margin-bottom: 1rem; /* Adds space between image and text */
+  height: 140px;
+  width: auto;
+  object-fit: contain;
 }
 
 .featureContent {
-  padding-left: 0rem; /* Adds padding to content for better spacing */
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.featureContent h3 {
-  margin-bottom: 0.5rem; /* Adds space below the title */
+.featureTitle {
   font-size: 1.5rem;
-}
-[data-theme='dark'] .featureContent h3 {
-  margin-bottom: 0.5rem; /* Adds space below the title */
-  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1a2a3a;
 }
 
+.featureDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a5568;
+  flex: 1;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 996px) {
+  .features {
+    padding: 3rem 0;
+  }
+  
+  .featuresTitle {
+    font-size: 2rem;
+  }
+  
+  .featuresSubtitle {
+    font-size: 1.1rem;
+  }
+}

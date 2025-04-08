@@ -4,70 +4,78 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Real-Time Data Processing',
-    Svg: () => <img src="/img/200x200.png" alt="Real-Time Data Processing" />, // Placeholder image
+    title: 'Precise Time Correlation',
+    svg: 'img/clock-sync.svg',
     description: (
       <>
-        MMTC offers real-time data processing capabilities, allowing users to analyze and visualize data as it streams in.
+        MMTC provides high-precision correlation between spacecraft clock (SCLK) values
+        and ground time measurements (TDT/TT), ensuring accurate mission operations.
       </>
     ),
   },
   {
-    title: 'User-Friendly Interface',
-    Svg: () => <img src="/img/200x200.png" alt="User-Friendly Interface" />, // Placeholder image
+    title: 'Clock Drift Analysis',
+    svg: 'img/drift-analysis.svg',
     description: (
       <>
-        Our platform features an intuitive interface designed for ease of use, enabling users to navigate and utilize tools effortlessly.
+        Track and analyze spacecraft clock drift rates over time, allowing for 
+        predictive corrections and enhanced mission planning.
       </>
     ),
   },
   {
-    title: 'Advanced Analytics',
-    Svg: () => <img src="/img/200x200.png" alt="Advanced Analytics" />, // Placeholder image
+    title: 'Multi-Mission Support',
+    svg: 'img/multi-mission.svg',
     description: (
       <>
-        Leverage advanced analytics tools to gain insights and make data-driven decisions with confidence.
+        Adaptable to various spacecraft and mission types with a flexible plugin 
+        architecture that integrates with existing mission operations systems.
       </>
     ),
   },
   {
-    title: 'Customizable Dashboards',
-    Svg: () => <img src="/img/200x200.png" alt="Customizable Dashboards" />, // Placeholder image
+    title: 'SPICE Integration',
+    svg: 'img/spice-integration.svg',
     description: (
       <>
-        Create and customize dashboards to visualize the metrics that matter most to your organization.
+        Seamless integration with NASA NAIF SPICE for navigation and 
+        ancillary information, providing enhanced time and position calculations.
       </>
     ),
   },
   {
-    title: 'Seamless Integration',
-    Svg: () => <img src="/img/200x200.png" alt="Seamless Integration" />, // Placeholder image
+    title: 'Comprehensive Output Products',
+    svg: 'img/output-products.svg',
     description: (
       <>
-        Easily integrate with existing systems and tools to streamline workflows and enhance productivity.
+        Generates industry-standard output products including SCLK kernels, 
+        SCLK/SCET files, and detailed analysis tables for mission use.
       </>
     ),
   },
   {
-    title: 'Robust Security Features',
-    Svg: () => <img src="/img/200x200.png" alt="Robust Security Features" />, // Placeholder image
+    title: 'Quality Control Filtering',
+    svg: 'img/quality-control.svg',
     description: (
       <>
-        MMTC prioritizes security with robust features to protect your data and ensure compliance with industry standards.
+        Advanced filtering capabilities ensure only high-quality telemetry data
+        is used for time correlation, maintaining precision and reliability.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({svg, title, description}) {
   return (
-    <div className={clsx('col col--4', styles.feature)}>
-      <div>
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className={styles.featureContent}>
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+    <div className={clsx('col col--4')}>
+      <div className={styles.featureCard}>
+        <div className={styles.featureImageContainer}>
+          <img src={svg} className={styles.featureSvg} alt={title} />
+        </div>
+        <div className={styles.featureContent}>
+          <Heading as="h3" className={styles.featureTitle}>{title}</Heading>
+          <p className={styles.featureDescription}>{description}</p>
+        </div>
       </div>
     </div>
   );
@@ -77,8 +85,13 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className={styles.sectionTitleContainer}>
-          <h2 className="sectionTitle">Key Features of MMTC</h2>
+        <div className={styles.featuresHeader}>
+          <Heading as="h2" className={styles.featuresTitle}>
+            Key Features
+          </Heading>
+          <p className={styles.featuresSubtitle}>
+            Discover how MMTC helps maintain precise spacecraft timekeeping
+          </p>
         </div>
         <div className="row">
           {FeatureList.map((props, idx) => (

@@ -193,3 +193,16 @@
   font-size: 2rem;
   color: #00467a;
 }
+
+.mermaid {
+  transition: transform 0.2s ease-in-out;
+  cursor: zoom-in;
+}
+
+.mermaid:hover {
+  transform: scale(1.5);
+  transform-origin: top left;
+  z-index: 10;
+  background-color: white;
+  border: 1px solid #ccc;
+}

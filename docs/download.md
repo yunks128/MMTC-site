@@ -1,74 +1,113 @@
-```md
 ---
 id: download
-title: Download
+title: Download MMTC
 sidebar_position: 2
 ---
 
-# Download and Get Started with MMTC
+# Download MMTC
 
-Welcome to the MMTC download page! This guide will help you get the latest version of the MMTC software, verify the authenticity of your download, and provide guidance on setting up your environment.
+This page provides information on obtaining the Multi-Mission Time Correlation (MMTC) software, a NASA AMMOS component developed by Johns Hopkins Applied Physics Laboratory (JHU/APL) for spacecraft time correlation.
 
-## Download Links
+## System Requirements
 
-You can download the latest version of MMTC from the following sources:
+Before downloading MMTC, ensure your system meets the following requirements:
 
-- **Download from Website**: [MMTC Download Page](https://mmtc.example.com/download)
-- **GitHub Releases**: [MMTC GitHub Releases](https://github.com/your-org/mmtc/releases)
-- **Package Manager**: 
-  - Example for npm: `npm install mmtc`
-  - Example for pip: `pip install mmtc`
+- **Operating System**: Red Hat Enterprise Linux (RHEL) 8 or 9 (recommended)
+- **Java Runtime**: Java 8 JDK/JRE
+- **Memory**: Minimum 4GB RAM (8GB recommended for large datasets)
+- **Disk Space**: At least 1GB available for installation and operational files
+- **Additional Software**: NAIF SPICE libraries (included in installation packages)
 
-> _Ensure that you download the software from trusted sources to avoid malicious versions._
+## Distribution Formats
 
-## Available Versions
+MMTC is available in the following distribution formats:
 
-Here are the available versions of MMTC:
+- **RPM Package**: For RHEL 8/9 environments (recommended for operational deployments)
+- **Tar Archive (.tar.gz)**: Platform-independent distribution for other Linux environments
 
-- **Latest Stable Release**: [v1.0.0](https://github.com/your-org/mmtc/releases/tag/v1.0.0)
-- **Previous Releases**:
-  - [v0.9.0](https://github.com/your-org/mmtc/releases/tag/v0.9.0)
-  - [v0.8.0](https://github.com/your-org/mmtc/releases/tag/v0.8.0)
-- **Nightly Builds**: [Get Nightly Builds](https://github.com/your-org/mmtc/actions)
+## Obtaining MMTC
 
-> _Note: Nightly builds are less stable and are intended for testing purposes._
+As a NASA AMMOS component, MMTC is distributed through official NASA software channels. Depending on your organization's relationship with NASA/JPL, you can obtain MMTC through one of these methods:
 
-## Verify Download Authenticity
+### For NASA/JPL Missions and Partners
 
-To ensure that the MMTC software you’ve downloaded is authentic and hasn’t been tampered with, we recommend verifying the integrity of the files using the provided checksums or signatures.
+- **AMMOS Software Catalog**: Access the [AMMOS Software Catalog](https://ammos.nasa.gov/software-catalog) (requires NASA credentials)
+- **JPL Software Release Authority**: Contact the [JPL SRA](mailto:jpl-sra@jpl.nasa.gov) for mission-specific access
 
-### Checksum Verification
+### For Other Space Agencies and Collaborators
 
-After downloading, you can verify the integrity of the file using its checksum:
+- **Interagency Agreement**: Access through existing space agency agreements with NASA
+- **JHU/APL Software Repository**: Available to authorized partners of JHU/APL
 
-1. Download the checksum file corresponding to your download:
-   - [SHA256 Checksum](https://mmtc.example.com/checksums/SHA256)
-   - [MD5 Checksum](https://mmtc.example.com/checksums/MD5)
+### For Academic and Research Institutions
 
-2. Run the following command to verify:
-   ```bash
-   sha256sum mmtc.zip
-   ```
-   Compare the output with the checksum provided to ensure they match.
+- **NASA Software Catalog**: Browse the [NASA Software Catalog](https://software.nasa.gov/) for availability
+- **Software Usage Agreement**: Complete necessary agreements for research use
 
-### Signature Verification
+## Verification of Downloads
 
-If the software is signed, you can verify the signature as follows:
+To verify the authenticity of your MMTC download:
 
-1. Download the PGP signature:
-   - [PGP Signature](https://mmtc.example.com/signatures/mmtc.zip.sig)
+### For RPM Packages
 
-2. Use GPG to verify the signature:
-   ```bash
-   gpg --verify mmtc.zip.sig mmtc.zip
-   ```
-   Ensure that the signature is valid and the file hasn’t been altered.
+Verify the RPM signature using the NASA public key:
 
-## Installation and Setup
-
-Once you have downloaded and verified the software, follow our [Installation Guide](user/installation.md) for next steps and more detailed directions.
-
-## Troubleshooting and Support
-
-If you encounter any issues during the download, installation, or setup process, please refer to our [Support Page](https://mmtc.example.com/support) for troubleshooting tips and contact information.
+```bash
+rpm --import NASA-AMMOS-PUBLIC-KEY.asc
+rpm -K mmtc-1.5.0-1.el8.x86_64.rpm
 ```
+
+### For Tar Archives
+
+Verify the SHA-256 checksum:
+
+```bash
+sha256sum mmtc-1.5.0.tar.gz
+```
+
+Compare with the provided checksum in the `SHA256SUMS.txt` file that accompanies the download.
+
+## Version Information
+
+### Current Release
+
+- **Version 1.5.0** (May 2024)
+  - Enhanced support for deep space missions
+  - Improved temperature compensation for oscillator drift
+  - Additional telemetry filters for data quality
+
+### Previous Releases
+
+- **Version 1.4.2** (January 2024): Bug fixes and performance improvements
+- **Version 1.4.0** (September 2023): Added support for RHEL 9
+- **Version 1.3.0** (March 2023): Enhanced SPICE kernel generation
+
+## Installation
+
+After downloading MMTC, follow our [Installation Guide](installation) for detailed instructions on:
+
+1. Installing the software packages
+2. Setting up the required directory structure
+3. Configuring the application for your mission
+4. Verifying the installation
+
+## Configuration Files
+
+MMTC requires the following configuration files to be set up for your specific mission:
+
+- `TimeCorrelationConfigProperties.xml`: Primary configuration file
+- `GroundStationsMap.csv`: Maps DSN station IDs to SPICE identifiers
+- `SclkPartitionMap.csv`: Defines spacecraft clock partitions
+- `log4j2.properties`: Configures logging behavior
+
+Sample configuration files are included in the distribution packages.
+
+## Support and Documentation
+
+If you encounter issues during download or installation:
+
+- **Technical Support**: Contact [MMTC Support](mailto:mmtc-support@jhuapl.edu)
+- **User Forums**: Join the [AMMOS User Community](https://ammos-community.jpl.nasa.gov) (requires registration)
+- **Training**: View [recorded training sessions](https://ammos.nasa.gov/training) for MMTC configuration and usage
+
+For comprehensive documentation, refer to the [User Guide](user) and [Technical Reference](technical) sections.

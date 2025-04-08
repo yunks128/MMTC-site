@@ -1,58 +1,116 @@
-```md
 ---
 id: contributing
-title: Contribute
+title: Contributing to MMTC
 sidebar_position: 5
 ---
 
-# Contributing Guide
+# Contributing to MMTC
 
-Thank you for considering contributing to the MMTC project! We greatly appreciate your time and effort. This document outlines the various ways you can contribute to our project and provides detailed guidance on best practices. We look forward to your support!
+Thank you for your interest in contributing to the Multi-Mission Time Correlation (MMTC) software! As a NASA AMMOS component developed by Johns Hopkins Applied Physics Laboratory (JHU/APL), MMTC serves a critical function in space missions by correlating spacecraft clock values with ground time. Your contributions help improve this essential tool for current and future missions.
 
 ## Prerequisites
 
-Before you begin contributing to the MMTC project, please ensure you have satisfied the following prerequisites.
+Before contributing to MMTC, please ensure you have the following:
 
-### License
+### License Understanding
 
-Our project is governed by specific licensing terms, including rules for redistribution, which are documented in our [LICENSE](LICENSE) file. Please review this file to understand the terms, as they will affect how we, or others, use your contributions.
+MMTC is released under the Apache License 2.0. Please familiarize yourself with this license by reviewing our [LICENSE](LICENSE) file, as it governs how your contributions can be used and distributed.
 
 ### Code of Conduct
 
-To maintain a positive interaction environment for everyone involved with the MMTC team, we have established a Code of Conduct. This document provides guidance on acceptable behavior and what to do if you encounter any problematic interactions. Please read our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) and ensure you agree to its terms.
+To maintain a professional and inclusive environment, we've established a Code of Conduct for all participants in the MMTC project. Please read our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) and adhere to these guidelines in all interactions.
 
-### Developer Environment
+### Development Environment
 
-For patch contributions, please refer to our [Developer Documentation](INSERT_YOUR_DEVELOPMENT_GUIDE_LINK_HERE) for detailed instructions on setting up your local environment to contribute effectively to the MMTC project.
+For contributing code changes, you'll need to set up a proper development environment:
 
-At a minimum, to submit patches (if using Git), you will need to ensure you have:
-1. An account on the Version Control System we use (i.e., GitHub).
-2. The Version Control System client (i.e., Git) installed on your local machine.
-3. The ability to edit, build, and test the MMTC project on your local machine. For more details, see our [README.md](README.md) or the detailed developer guide.
+1. **Java Development Kit (JDK) 8** - MMTC is developed using Java 8
+2. **Gradle** - For building and managing dependencies
+3. **SPICE Libraries** - Understanding of NAIF SPICE libraries is helpful
+4. **RHEL 8/9** - The target deployment environment (though development can occur on other platforms)
 
-### Communication Channels
+Refer to our [Developer Guide](developer) for comprehensive setup instructions.
 
-Before contributing changes to the MMTC project, it is advisable to familiarize yourself with our communication channels. Engaging with the community early can provide valuable feedback and context for your contributions.
+## Types of Contributions
 
-Our communication channels include:
-- [Issue Tracking System](INSERT_LINK_TO_ISSUE_TRACKING_SYSTEM) - a monitored area to report bugs, request features, and discuss potential contributions.
-- [Discussion Forum](INSERT_LINK_TO_DISCUSSION_FORUM) - a place for broader conversations about the project, ideas, and collaboration.
-- [Chat Platform](INSERT_LINK_TO_CHAT_PLATFORM) - for real-time discussions and quick questions.
+### 1. Code Contributions
 
-## How to Contribute
+MMTC welcomes code contributions in several areas:
 
-1. **Fork the Repository**: Create a personal copy of the MMTC repository on GitHub.
-2. **Create a Branch**: Make a new branch for your feature or bug fix.
-3. **Make Changes**: Implement your changes and ensure they adhere to our coding standards.
-4. **Write Tests**: If applicable, write tests to cover your changes.
-5. **Submit a Pull Request**: Once your changes are ready, submit a pull request to the main repository for review.
+- **Core Framework Improvements** - Enhancements to time correlation algorithms
+- **New Telemetry Source Plugins** - Support for additional telemetry sources
+- **Additional Filters** - New quality filters for telemetry data
+- **Output Product Generators** - Additional product formats for mission support
+- **Performance Optimizations** - Improvements to processing efficiency
+
+### 2. Documentation Contributions
+
+Help improve MMTC's documentation:
+
+- Clarify configuration procedures
+- Add examples of mission-specific implementations
+- Create tutorials for common workflows
+- Document best practices for telemetry processing
+
+### 3. Testing Contributions
+
+- Create test cases for edge conditions
+- Develop integration tests with mission systems
+- Test performance with large telemetry datasets
+
+## Contribution Process
+
+1. **Start a Discussion** - For significant changes, begin by opening a discussion on our issue tracker to ensure your planned work aligns with project goals.
+
+2. **Fork & Branch** - Fork the MMTC repository and create a branch with a descriptive name related to your contribution (e.g., `add-vms-telemetry-plugin`, `improve-clock-drift-calculation`).
+
+3. **Follow Coding Standards** - Adhere to the existing code style, including:
+   - Java code conventions
+   - Comprehensive JavaDoc comments
+   - Unit tests for new functionality
+   - Error handling consistent with existing patterns
+
+4. **Create Pull Request** - Submit your changes through a pull request with:
+   - Clear description of changes
+   - Reference to any related issues
+   - Documentation updates if applicable
+   - Test results demonstrating functionality
+
+5. **Code Review** - Work with the MMTC maintainers during the review process to address any feedback.
 
 ## Best Practices
 
-- Follow the project's coding style and guidelines.
-- Write clear and concise commit messages.
-- Keep your pull requests focused on a single issue or feature.
-- Be open to feedback and willing to make adjustments based on reviewer comments.
+### When Developing Plugins
 
-Thank you for your interest in contributing to the MMTC project! Your contributions help us improve and grow.
-```
+- Implement the standard telemetry source interface
+- Document telemetry format requirements
+- Include example configuration
+
+### When Modifying Core Components
+
+- Ensure backward compatibility where possible
+- Consider impacts on existing mission deployments
+- Document changes in the architectural documentation
+
+### When Contributing to Products
+
+- Ensure compliance with SPICE standards for SCLK kernels
+- Validate output with test datasets
+- Document any format changes
+
+## Communication Channels
+
+- **Issue Tracker**: [MMTC Issue Tracker](https://github.com/nasa/mmtc/issues) (Replace with actual link)
+- **Developer Mailing List**: mmtc-dev@jhuapl.edu (Replace with actual contact)
+- **User Forum**: [MMTC User Forum](https://forum.nasa.gov/mmtc) (Replace with actual link)
+
+## Testing Guidelines
+
+Before submitting your contribution, ensure:
+
+1. All unit tests pass
+2. Your code maintains or improves test coverage
+3. You've tested with representative telemetry data
+4. You've validated any time correlation products against expected outputs
+
+Thank you for contributing to MMTC! Your efforts help improve spacecraft operations for NASA and other missions worldwide.
