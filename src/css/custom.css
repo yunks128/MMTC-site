@@ -1,0 +1,195 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* Override the default Infima variables */
+:root {
+  --ifm-color-primary: #005b96; /* Updated primary color to match PDF style */
+  --ifm-color-primary-dark: #00467a;
+  --ifm-color-primary-darker: #003865;
+  --ifm-color-primary-darkest: #00294f;
+  --ifm-color-primary-light: #0073b1;
+  --ifm-color-primary-lighter: #0086cc;
+  --ifm-color-primary-lightest: #0099e6;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.05); /* Softer background for highlighted code lines */
+  --ifm-font-family-base: 'Open Sans', sans-serif; /* A clean, modern font */
+  --ifm-heading-font-weight: 600; /* Slightly bolder headings */
+}
+
+/* Adjustments for dark mode */
+[data-theme='dark'] {
+  --ifm-color-primary: #66b2ff; /* Lighter, more vibrant blue for dark mode */
+  --ifm-color-primary-dark: #4d9de0;
+  --ifm-color-primary-darker: #3388cc;
+  --ifm-color-primary-darkest: #1a73b2;
+  --ifm-color-primary-light: #80c6ff;
+  --ifm-color-primary-lighter: #99d4ff;
+  --ifm-color-primary-lightest: #b3e2ff;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-font-family-base: 'Open Sans', sans-serif;
+}
+
+/* Add styles for the navbar links */
+.navbar__link {
+  text-decoration: none; /* Remove underline by default */
+  color: inherit; /* Keep the link color consistent */
+  font-weight: 600; /* Optional: Add a bit of weight to the navbar links */
+}
+
+.navbar__link:hover {
+  text-decoration: underline; /* Add underline on hover */
+  color: inherit; /* Keep the color the same on hover */
+}
+
+/* Ensure the sidebar links follow the same pattern */
+.menu__link {
+  text-decoration: none; /* Remove underline by default */
+  color: inherit;
+  font-weight: 600;
+}
+
+.menu__link:hover {
+  text-decoration: underline; /* Add underline on hover */
+  color: inherit;
+}
+
+/* Ensure the sidebar links follow the same pattern */
+.navbar__title {
+  text-decoration: none; /* Remove underline by default */
+  color: inherit;
+  font-weight: 600;
+}
+
+.navbar__title:hover {
+  text-decoration: none; /* Add underline on hover */
+  color: inherit;
+}
+
+.navbar__brand {
+  text-decoration: none; /* Remove underline by default */
+  color: inherit;
+  font-weight: 1000;
+}
+
+.navbar__brand:hover {
+  text-decoration: none; /* Add underline on hover */
+  color: inherit;
+}
+
+/* Custom styles */
+.screenshot {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.features {
+  background-color: #f5f5f5; /* Light grey background to separate sections */
+  padding: 40px 0;
+}
+
+.features h2 {
+  color: #00467a; /* Primary dark blue for feature headings */
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.features .text--center {
+  text-align: center;
+}
+
+.features p {
+  color: #333; /* Darker text for better readability */
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 60px 0; /* Consistent padding for all sections */
+}
+
+.section h2 {
+  font-size: 2rem; /* Larger section titles */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section p {
+  font-size: 1.2rem; /* Larger text for better readability */
+  color: #555; /* Softer text color for general content */
+}
+
+.sectionTitle {
+  font-size: 2rem; /* Consistent section title size */
+  color: #00467a; /* Dark blue color for section titles */
+  text-align: left;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+[data-theme='dark'] .sectionTitle {
+  font-size: 2rem; /* Consistent section title size */
+  color: #ffffff; /* Dark blue color for section titles */
+  text-align: left;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+/* Button styles to ensure readability */
+.button--primary {
+  background-color: #0073b1; /* Primary button color */
+  color: #ffffff; /* White text for contrast */
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.button--primary:hover {
+  background-color: #005b96; /* Darker shade on hover */
+  color: #ffffff; /* Ensure text remains white for readability */
+}
+
+.button--secondary {
+  background-color: #025c8d; /* Secondary button darker background */
+  color: #ffffff !important; /* White text for contrast */
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.button--secondary:hover {
+  background-color: #003865; /* Darker shade on hover */
+  color: #ffffff; /* Ensure text remains white for readability */
+}
+
+/* Darker buttons in dark mode should have lighter text */
+[data-theme='dark'] .button--primary, [data-theme='dark'] .button--secondary {
+  color: #ffffff; /* White text for readability */
+}
+
+[data-theme='dark'] .button--primary:hover, [data-theme='dark'] .button--secondary:hover {
+  color: #ffffff; /* Ensure text remains white for readability on hover */
+}
+
+.sectionTitle {
+  text-align: left; /* Align section titles to the left */
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #00467a;
+}

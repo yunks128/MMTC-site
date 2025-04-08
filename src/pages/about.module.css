@@ -1,0 +1,59 @@
+.teamSection, .contributorsSection, .communicationSection {
+  padding: 60px 0;
+  text-align: left; /* Left-aligns the content */
+}
+
+.teamMembers, .contributors {
+  display: flex;
+  justify-content: flex-start; /* Left-aligns the content within the section */
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.teamMember, .contributor {
+  text-align: left; /* Ensures each member/contributor content is left-aligned */
+  margin: 20px;
+}
+
+.teamMember img, .contributor img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.25rem;
+  text-align: left; /* Left-aligns the section subtitle */
+  margin-bottom: 3rem;
+}
+
+.communicationLinks {
+  list-style: none;
+  padding: 0;
+  text-align: left; /* Left-aligns the links */
+}
+
+.communicationLinks li {
+  margin: 10px 0;
+}
+
+.communicationLinks a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.communicationLinks a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.mainContent {
+  padding: 4rem 0;
+}
