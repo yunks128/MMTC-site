@@ -6,7 +6,6 @@ on:
 
 jobs:
   deploy:
-    name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -23,8 +22,10 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
 
+      - name: Set GitHub Pages remote with token
+        run: git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+
       - name: Deploy website to GitHub Pages
         env:
-          GIT_USER: yunks128
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_USER: github-actions[bot]
         run: yarn deploy
