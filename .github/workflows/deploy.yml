@@ -19,4 +19,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Deploy website
+        env:
+          GIT_USER: github-actions[bot]
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: yarn deploy
