@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Background data stream -->
+  <g fill="#f0f0f0" stroke="#ddd">
+    <rect x="20" y="30" width="160" height="15" rx="2" ry="2"/>
+    <rect x="20" y="55" width="160" height="15" rx="2" ry="2"/>
+    <rect x="20" y="80" width="160" height="15" rx="2" ry="2"/>
+    <rect x="20" y="105" width="160" height="15" rx="2" ry="2"/>
+    <rect x="20" y="130" width="160" height="15" rx="2" ry="2"/>
+    <rect x="20" y="155" width="160" height="15" rx="2" ry="2"/>
+  </g>
+  
+  <!-- Data symbols -->
+  <g fill="#333" font-family="monospace" font-size="10">
+    <text x="30" y="42">5F 43 12 7A 9E B2 C1 06 82 4F 3A 16 D0 FF 7C 89</text>
+    <text x="30" y="67">23 B7 0F E2 A1 C6 D9 58 47 90 61 38 F4 2C 8D 5E</text>
+    <text x="30" y="92">4A 72 B9 E3 7D 0C 55 F1 8E 37 A2 D8 69 C3 41 9F</text>
+    <text x="30" y="117">88 ED 13 0A 7C 3F C5 51 B3 29 F6 4E 92 1D A0 5E</text>
+    <text x="30" y="142">76 1B CE 53 D4 86 02 AD F9 60 23 E5 BA 3C 97 41</text>
+    <text x="30" y="167">11 AC 95 D3 68 F7 3D 29 B0 4F C2 8E 57 0A 71 E6</text>
+  </g>
+  
+  <!-- Filter symbols -->
+  <g stroke="#4a90e2" stroke-width="2" fill="none">
+    <rect x="70" y="75" width="110" height="25" rx="5" ry="5" stroke-dasharray="5,3"/>
+    <line x1="70" y1="87.5" x2="180" y2="87.5" stroke-dasharray="5,3"/>
+  </g>
+  
+  <!-- Checkmarks and X marks -->
+  <g stroke="#4a90e2" stroke-width="2" stroke-linecap="round">
+    <path d="M185,40 L195,30 M185,30 L195,40" stroke="#f5a623"/>
+    <path d="M185,65 L195,55 M185,55 L195,65" stroke="#f5a623"/>
+    <path d="M185,87.5 L190,92.5 L200,77.5" stroke="#4a90e2"/>
+    <path d="M185,115 L195,105 M185,105 L195,115" stroke="#f5a623"/>
+    <path d="M185,140 L195,130 M185,130 L195,140" stroke="#f5a623"/>
+    <path d="M185,165 L195,155 M185,155 L195,165" stroke="#f5a623"/>
+  </g>
+  
+  <!-- Magnifying glass -->
+  <circle cx="40" cy="87.5" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="51" y1="98.5" x2="60" y2="107.5" stroke="#333" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Quality filter text -->
+  <text x="100" y="69" text-anchor="middle" fill="#4a90e2" font-family="Arial" font-size="10" font-weight="bold">QUALITY FILTER</text>
+  
+  <!-- Valid data label -->
+  <text x="125" y="92" text-anchor="middle" fill="#4a90e2" font-family="Arial" font-size="10">Valid Data</text>
+  
+  <!-- Legend -->
+  <rect x="20" y="180" width="160" height="15" fill="none" stroke="#333" stroke-width="1" rx="2" ry="2"/>
+  <text x="100" y="190" text-anchor="middle" fill="#333" font-family="Arial" font-size="8">Data Quality Evaluation</text>
+</svg>
