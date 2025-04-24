@@ -1,4 +1,3 @@
-```md
 ---
 id: project-structure
 title: Project Structure
@@ -84,4 +83,3 @@ The `tests` directory contains test files organized into subdirectories for unit
 - **package.json**: Contains metadata about the project and its dependencies.
 
 This structure is designed to facilitate development and maintainability as the MMTC project evolves. Developers are encouraged to follow these conventions to ensure consistency across the codebase.
-```

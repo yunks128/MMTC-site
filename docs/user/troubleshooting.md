@@ -1,4 +1,3 @@
-```md
 ---
 id: troubleshooting
 title: Troubleshooting
@@ -79,4 +78,3 @@ Welcome to the Troubleshooting Guide for MMTC! This document provides solutions 
    ```
 
 For further assistance, please refer to the [MMTC Documentation](https://mmtc.example.com/docs) or contact support.
-```

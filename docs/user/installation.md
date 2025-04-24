@@ -1,4 +1,3 @@
-```md
 ---
 id: installation
 title: Installation Guide
@@ -82,4 +81,3 @@ If you prefer to install from source, follow these steps:
 ## Troubleshooting
 
 If you encounter any issues during installation, please refer to the [Troubleshooting Guide](troubleshooting.md) or open an issue on our [GitHub Issues page](https://github.com/your-org/mmtc/issues).
-```

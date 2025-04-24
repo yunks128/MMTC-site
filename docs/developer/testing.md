@@ -1,4 +1,3 @@
-```md
 ---
 id: testing
 title: Testing
@@ -86,4 +85,3 @@ The below list of test categories are included in our testing setup. Further det
   - Tips:
     - Include performance tests for critical user journeys.
     - Monitor performance metrics and set benchmarks for future tests.
-```

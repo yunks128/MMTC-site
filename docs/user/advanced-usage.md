@@ -1,4 +1,3 @@
-```md
 ---
 id: advanced-usage
 title: Advanced Usage
@@ -81,4 +80,3 @@ This section addresses common issues users may encounter when utilizing advanced
 - **Configuration Errors**: Double-check your configuration files for syntax errors or missing required fields.
 
 > **Tip**: Consult the MMTC community forums for additional support and troubleshooting tips.
-```

@@ -1,4 +1,3 @@
-```md
 ---
 id: features
 title: Feature Overview
@@ -69,4 +68,3 @@ To set up API Integration, follow these steps:
 3. Use the provided endpoints to interact with MMTC data programmatically.
 
 > **Caution**: Ensure that you follow security best practices when handling API keys and sensitive data.
-```

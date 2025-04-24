@@ -1,4 +1,3 @@
-```md
 ---
 id: getting-started-dev
 title: Getting Started
@@ -100,4 +99,3 @@ We welcome contributions to MMTC! Please read our [CONTRIBUTING.md](CONTRIBUTING
 - [Issue Tracker](https://github.com/your-username/mmtc/issues)
 
 Happy coding!
-```

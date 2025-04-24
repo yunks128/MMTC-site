@@ -1,4 +1,3 @@
-```md
 ---
 id: quick-start
 title: Quick Start Guide
@@ -90,4 +89,3 @@ Now that you're familiar with the basics, you may want to:
 - **Learn About Advanced Features**: Explore the advanced features of MMTC.
 - **Customize the Software**: Tailor MMTC to your specific needs.
 - **Contribute to the Project**: Check out our [Contributing Guide](/docs/contributing) if you're interested in contributing.
-```

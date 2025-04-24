@@ -1,4 +1,3 @@
-```md
 ---
 id: tutorials
 title: MMTC Tutorials
@@ -37,4 +36,3 @@ We encourage community contributions! If you have a tutorial idea or want to imp
 We value your feedback. If you have suggestions, questions, or encounter any issues with our tutorials, please reach out to us through our [support channels](/about).
 
 Happy learning with MMTC!
-```
