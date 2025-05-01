@@ -31,6 +31,7 @@ MMTC (Multi-Mission Time Correlation) is a NASA AMMOS component developed by Joh
 
 - [Features](#features)
 - [Contents](#contents)
+- [Repository Structure](#repository-structure)
 - [Quick Start](#quick-start)
   - [Requirements](#requirements)
   - [Setup Instructions](#setup-instructions)
@@ -42,6 +43,54 @@ MMTC (Multi-Mission Time Correlation) is a NASA AMMOS component developed by Joh
 - [Contributing](#contributing)
 - [License](#license)
 - [Support](#support)
+
+## Repository Structure
+
+```
+/MMTC-site/
+├── .github/                   # GitHub-specific files
+│   └── PULL_REQUEST_TEMPLATE.md  # Template for pull requests
+├── blog/                      # Blog posts for developer notes
+│   ├── 2021-08-26-welcome/    # Blog post with assets
+│   │   └── index.md           # Blog post content
+│   └── YYYY-MM-DD-title.md    # Other blog posts
+├── docs/                      # Documentation files (Markdown)
+│   ├── developer/             # Developer documentation
+│   │   ├── api.md             # API reference
+│   │   ├── getting-started-dev.md  # Developer getting started
+│   │   └── ...                # Other developer docs
+│   ├── user/                  # User documentation
+│   │   ├── installation.md    # Installation guide
+│   │   ├── quick-start.md     # Quick start guide
+│   │   └── ...                # Other user docs
+│   ├── contributing.md        # Contributing guidelines
+│   ├── faqs.md                # FAQ page
+│   └── index.md               # Documentation home page
+├── src/                       # Source code for the website
+│   ├── components/            # React components
+│   │   └── HomepageFeatures/  # Homepage feature components
+│   │       ├── index.js       # Component implementation
+│   │       └── styles.module.css  # Component styles
+│   ├── css/                   # Global CSS styles
+│   │   └── custom.css         # Custom CSS overrides
+│   └── pages/                 # Static pages
+│       ├── about.js           # About page
+│       ├── index.js           # Homepage
+│       └── ...                # Other pages
+├── static/                    # Static assets
+│   ├── img/                   # Images and icons
+│   └── ...                    # Other static files
+├── babel.config.js            # Babel configuration
+├── CHANGELOG.md               # Project changelog
+├── CODE_OF_CONDUCT.md         # Code of conduct
+├── CONTRIBUTING.md            # Contributing guidelines
+├── docusaurus.config.js       # Docusaurus configuration
+├── GOVERNANCE.md              # Project governance model
+├── LICENSE                    # License file
+├── package.json               # Node.js dependencies
+├── README.md                  # This file
+└── sidebars.js                # Sidebar configuration
+```
 
 ## Quick Start
 
